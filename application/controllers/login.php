@@ -10,7 +10,7 @@ class Login extends CI_Controller {
   {
     $data['css'] = 'assets/css/style-login.css';
     $data['title'] = 'Home';
-    $data['js'] = 'js/index-all.js';
+    $data['js'] = 'assets/js/index-all.js';
     $this->load->view('template/header', $data);
     $this->load->view('login-session');
     $this->load->view('template/footer', $data);

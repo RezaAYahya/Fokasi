@@ -21,7 +21,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Home';
-		$data['js'] = 'js/index.js';
+		$data['js'] = 'assets/js/index.js';
 		$this->load->view('template/header', $data);
 		$this->load->view('welcome_message');
 		$this->load->view('template/footer', $data);
@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
 	public function blog()
 	{
 		$data['title'] = 'Informasi Kesehatan';
-		$data['js'] = 'js/index-all.js';
+		$data['js'] = 'assets/js/index-all.js';
 		$this->load->view('template/header', $data);
 		$this->load->view('blog');
 		$this->load->view('template/footer', $data);
