@@ -34,4 +34,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('blog');
 		$this->load->view('template/footer', $data);
 	}
+	public function about()
+	{
+		$data['title'] = 'About';
+		$data['js'] = 'assets/js/index-all.js';
+		$this->load->view('template/header', $data);
+		$this->load->view('about');
+		$this->load->view('template/footer', $data);
+	}
+	public function searchDok()
+	{
+		$data['title'] = 'Cari Dokter';
+		$data['js'] = 'assets/js/index-all.js';
+		$this->load->view('template/header', $data);
+		$this->load->view('search-dokter');
+		$this->load->view('template/footer', $data);
+	}
 }
