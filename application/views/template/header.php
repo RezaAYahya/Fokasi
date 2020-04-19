@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/style.css' ?>" />
     <?php if(isset($css)){ ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url() . $css ?>" />
-    <?php }?> ?>
+    <?php }?>
     <script language="JavaScript">
         var tanggallengkap = new String();
         var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
