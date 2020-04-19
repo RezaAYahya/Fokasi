@@ -2,13 +2,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
- function __construct(){
-  parent::__construct();
- }
- 
- public function index()
- {
-  $this->load->view('login-session');
- }
+  function __construct(){
+    parent::__construct();
+  }
+
+  public function index()
+  {
+    $this->load->view('login-session');
+  }
+  public function user(){
+    $this->load->view('login-user');
+  }
+  public function dokter(){
+    $this->load->view('login-dokter');
+  }
 }
 ?>
