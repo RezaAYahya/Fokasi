@@ -85,7 +85,7 @@
                 <form>
                     <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>"/>
                     <h2>Masuk Sebagai User</h2></br>
-                    <a href="login-user.html" class="button">Masuk</a>
+                    <a href="<?= base_url(). 'login/user' ?>" class="button">Masuk</a>
                 </form>
             </div>
 
@@ -93,7 +93,7 @@
                 <form>
                     <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>"/>
                     <h2>Masuk Sebagai Dokter</h2></br>
-                    <a href="login-dokter.html" class="button">Masuk</a>
+                    <a href="<?= base_url(). 'login/dokter' ?>" class="button">Masuk</a>
                 </form>
             </div>
         </div>
