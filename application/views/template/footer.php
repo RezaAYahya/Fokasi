@@ -16,9 +16,9 @@
                     <div class="col-lg-3 offset-lg-1">
                         <div class="ft-nav">
                             <h6>Navigasi</h6>
-                            <a class="ft-link" href="about.html">Tentang Kami</a><br>
+                            <a class="ft-link" href="<?= base_url() . 'welcome/about' ?>">Tentang Kami</a><br>
                             <a class="ft-link" href="<?= base_url() . 'welcome/blog' ?>">Informasi Kesehatan</a><br>
-                            <a class="ft-link" href="search-dokter.html">Cari Dokter</a><br>
+                            <a class="ft-link" href="<?= base_url() . 'welcome/searchDok' ?>">Cari Dokter</a><br>
                             <a class="ft-link" href="index.html">Cari Obat</a><br>
                             <a class="ft-link" href="contact.html">Kontak Kami</a>
                         </div>
