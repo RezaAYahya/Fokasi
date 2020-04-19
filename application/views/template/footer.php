@@ -37,5 +37,5 @@
     </footer>
     <!-- End Footer -->
     <!-- Actionbar Animation.js -->
-    <script src="js/index.js"></script>
+    <script src="<?= base_url() . 'assets/js/index.js'?>"></script>
 </body>
