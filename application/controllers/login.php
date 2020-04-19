@@ -8,7 +8,12 @@ class Login extends CI_Controller {
 
   public function index()
   {
+    $data['css'] = 'assets/css/style-login.css';
+    $data['title'] = 'Home';
+    $data['js'] = 'js/index-all.js';
+    $this->load->view('template/header', $data);
     $this->load->view('login-session');
+    $this->load->view('template/footer', $data);
   }
   public function user(){
     $this->load->view('login-user');
