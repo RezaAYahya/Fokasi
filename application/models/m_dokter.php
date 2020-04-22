@@ -36,4 +36,25 @@ class m_dokter extends CI_Model
         $rating = $this->db->select('rating')->where('username', $username)->get('tb_dokter')->result();
         $rating = $rating - 1;
     }
+
+    public function getkomendokter($username)
+    {
+        $query = $this->db->where('username', $username)->get('tb_komen');
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        } else {
+            return false;
+        }
+    }
+
+    public function addkomendokter($data)
+    {
+        $username = $data['username'];
+        $komentar = $data['komentar'];
+        $id = $data['post_id'];
+
+        $this->db->where('post_id', $id)->set('username', $username);
+        $this->db->set('komentar', $komentar);
+        $this->db->insert('tb_komen');
+    }
 }
