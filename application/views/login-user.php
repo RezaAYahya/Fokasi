@@ -26,20 +26,27 @@
 <body class="bg-white">
     <center>
         <div class="container">
-            <form action="#" method="post">
+            <form action="<?= base_url('login/user') ?>" method="post">
                 <center>
                     <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>" />
                 </center>
                 <h3>Masuk</h3>
                 <p>Gunakan Akun MediFo yang Terdaftar</p>
                 <div class="form-content">
+                    <?php if (isset($error_message)) { ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= $error_message ?>
+                        </div>
+                    <?php } ?>
                     <input id="username" name="username" placeholder="Username" type="text" />
+                    <?= form_error('username', '<small class="text-danger">', '</small>'); ?>
                     <input id="password" name="password" placeholder="Password" type="password" /><br />
-                    <div class="button">
+                    <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
+                    <button type="submit" class="button">
                         Masuk
-                    </div>
+                    </button>
                     <br />
-                    <div class="signup-message">
+                    <div type="submit" class="signup-message">
                         <a href="<?= base_url() . 'register/user' ?>">Belum punya Akun?</a>
                     </div>
                 </div>

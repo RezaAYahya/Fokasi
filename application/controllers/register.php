@@ -51,7 +51,7 @@ class Register extends CI_Controller
     public function dokter()
     {
 
-        $this->form_validation->set_rules('usernamedok', 'username', 'is_unique[tb_dokter.usernamedok]|required|trim', [
+        $this->form_validation->set_rules('username', 'username', 'is_unique[tb_dokter.usernamedok]|required|trim', [
             'is_unique' => "Username yang anda masukkan telah dipakai"
         ]);
 
@@ -67,7 +67,7 @@ class Register extends CI_Controller
             $this->load->view('register-dokter');
         } else {
             $data = [
-                'usernamedok' => $this->input->post('usernamedok'),
+                'usernamedok' => $this->input->post('username'),
                 'password' => $this->input->post('password'),
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),

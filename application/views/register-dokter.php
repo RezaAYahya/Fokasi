@@ -25,7 +25,7 @@
                 <div class="form-content">
                     <input id="name" name="name" placeholder="Nama" type="text" value="<?= set_value('name'); ?>" />
                     <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
-                    <input id="username" name="usernamedok" placeholder="Username" type="text" value="<?= set_value('usernamedok'); ?>" />
+                    <input id="username" name="username" placeholder="Username" type="text" value="<?= set_value('username'); ?>" />
                     <?= form_error('usernamedok', '<small class="text-danger">', '</small>'); ?>
                     <input id="password" name="password" placeholder="Password" type="password" value="<?= set_value(''); ?>" />
                     <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
