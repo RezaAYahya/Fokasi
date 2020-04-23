@@ -46,4 +46,13 @@ class m_member extends CI_Model
             return false;
         }
     }
+
+    public function deletemypost($data)
+    {
+        $user = $data['username']; #username yang punya post ambil aja dari session
+        $posting_id = $data['posting_id']; #kalau ini ambil dari param controller
+        $this->db->where('username', $user);
+        $this->db->where('posting_id', $posting_id);
+        $this->db->delete('tb_posting');
+    }
 }
