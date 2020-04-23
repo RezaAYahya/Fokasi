@@ -34,12 +34,14 @@ class m_dokter extends CI_Model
     {
         $rating = $this->db->select('rating')->where('usernamedok', $username)->get('tb_dokter')->result();
         $rating = $rating + 1;
+        $this->db->set('rating', $rating)->where('usernamedok', $username)->update('tb_dokter');
     }
 
     public function decreaserating($username)
     {
         $rating = $this->db->select('rating')->where('usernamedok', $username)->get('tb_dokter')->result();
         $rating = $rating - 1;
+        $this->db->set('rating', $rating)->where('usernamedok', $username)->update('tb_dokter');
     }
 
     public function getkomendokter($username)
@@ -54,8 +56,11 @@ class m_dokter extends CI_Model
 
     public function addkomendokter($data)
     {
+        #usernamedok untuk menambah ke tabel komentar
         $username = $data['usernamedok'];
+        #untuk menambah isi komentar
         $komentar = $data['komentar'];
+        #jelas ini perlu bangettt
         $id = $data['post_id'];
 
         $this->db->where('post_id', $id)->set('usernamedok', $username);
