@@ -25,6 +25,11 @@ class m_dokter extends CI_Model
         $this->db->update('tb_member');
     }
 
+    public function regisDokter($data)
+    {
+        $this->db->insert('tb_dokter', $data);
+    }
+
     public function increaserating($username)
     {
         $rating = $this->db->select('rating')->where('usernamedok', $username)->get('tb_dokter')->result();

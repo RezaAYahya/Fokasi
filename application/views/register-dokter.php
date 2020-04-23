@@ -16,19 +16,23 @@
 <body class="bg-white">
     <center>
         <div class="container">
-            <form action="index.html" method="post">
+            <form action="<?= base_url('register/dokter') ?>" method="post">
                 <center>
                     <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>" />
                 </center>
                 <h3>Daftar - Dokter side</h3>
                 <p>Buat Akun Dokter MediFo</p>
                 <div class="form-content">
-                    <input id="name" name="name" placeholder="Nama" type="text" />
-                    <input id="nid" name="nid" placeholder="Nomor Induk Dokter" type="text" />
-                    <input id="user-name" name="usernamedok" placeholder="Username" type="text" />
-                    <input id="password" name="password" placeholder="Password" type="password" />
-                    <input id="email" name="email" placeholder="Email" type="text" />
-                    <input id="number" name="number" placeholder="Nomor Telepon" type="text" />
+                    <input id="name" name="name" placeholder="Nama" type="text" value="<?= set_value('name'); ?>" />
+                    <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
+                    <input id="username" name="usernamedok" placeholder="Username" type="text" value="<?= set_value('usernamedok'); ?>" />
+                    <?= form_error('usernamedok', '<small class="text-danger">', '</small>'); ?>
+                    <input id="password" name="password" placeholder="Password" type="password" value="<?= set_value(''); ?>" />
+                    <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
+                    <input id="email" name="email" placeholder="Email" type="text" value="<?= set_value('email'); ?>" />
+                    <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
+                    <input id="number" name="number" placeholder="Nomor Telepon" type="text" value="<?= set_value('number'); ?>" />
+                    <?= form_error('number', '<small class="text-danger">', '</small>'); ?>
                     <select class="form-control selectpicker" id="bidang" name="bidang">
                         <option value="1">Kandungan</option>
                         <option value="2">Kulit</option>
@@ -41,15 +45,15 @@
                         <option value="9">Jantung</option>
                     </select>
                     <br />
-                    <div class="button">
+                    <button type="submit" class="button">
                         Daftar Sekarang!
-                    </div>
-                    <br />
-                    <div class="register-message">
-                        <a href="<?= base_url() . 'login/dokter' ?>">Sudah punya Akun?</a>
-                    </div>
-                </div>
+                    </button>
             </form>
+            <br />
+            <div class="register-message">
+                <a href="<?= base_url() . 'login/dokter' ?>">Sudah punya Akun?</a>
+            </div>
+        </div>
         </div>
     </center>
 </body>

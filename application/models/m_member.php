@@ -23,6 +23,11 @@ class m_member extends CI_Model
         $this->db->update('tb_member');
     }
 
+    public function regisMember($data)
+    {
+        $this->db->insert('tb_member', $data);
+    }
+
     // kalau foreign key gak berubah
     // public function setpostowner($data){
     //     $this->db->set('username', $data['username']);
