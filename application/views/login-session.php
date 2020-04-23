@@ -1,4 +1,9 @@
     <!-- Header Rata -->
+    <style>
+        .pilihanlogin {
+            padding-bottom: 50px;
+        }
+    </style>
     <div class="header-rata">
         <div class="container">
             <div class="row">
@@ -17,23 +22,29 @@
     <!-- End Header Rata -->
 
     <!-- Choose Login -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="container">
-                <form>
-                    <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>"/>
-                    <h2>Masuk Sebagai User</h2></br>
-                    <a href="<?= base_url(). 'login/user' ?>" class="button">Masuk</a>
-                </form>
+    <div class="container">
+        <center>
+            <div class="row pilihanlogin">
+                <div class="col-md-5">
+                    <form>
+                        <center>
+                            <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>" />
+                        </center>
+                        <h2>Masuk Sebagai <br>User</h2></br>
+                        <a href="<?= base_url() . 'login/user' ?>" class="button">Masuk</a>
+                    </form>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-md-5">
+                    <form>
+                        <center>
+                            <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>" />
+                        </center>
+                        <h2>Masuk Sebagai Dokter</h2></br>
+                        <a href="<?= base_url() . 'login/dokter' ?>" class="button">Masuk</a>
+                    </form>
+                </div>
             </div>
-
-            <div class="container">
-                <form>
-                    <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>"/>
-                    <h2>Masuk Sebagai Dokter</h2></br>
-                    <a href="<?= base_url(). 'login/dokter' ?>" class="button">Masuk</a>
-                </form>
-            </div>
-        </div>
+        </center>
     </div>
     <!-- End Choose Login -->
