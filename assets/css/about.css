@@ -1,0 +1,36 @@
+.nav-cards .nav-cards_item {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 25px;
+}
+
+.icon-avatar {
+	padding-top: 20%;
+}
+
+.about-content{
+	text-align: center;
+}
+
+.about-content .about-desc {
+	padding-bottom:50px;
+}
+
+.about-duo {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-duo .about-single {
+	width: 450px;
+}
+
+.about-kelompok {
+	padding-bottom: 50px;
+}
+
+.avatar {
+	width: 60px;
+	border-radius: 50px;
+}
