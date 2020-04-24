@@ -66,7 +66,7 @@
                         </ul>
                         <div class="btn-show">
                             <button class="btn btn-outline-primary my-2 my-sm-0" onclick="location.href='<?= base_url() . 'login/index'?>'">Masuk</button>
-                            <button class="btn btn-primary my-2 my-sm-0">Daftar</button>
+                            <button class="btn btn-primary my-2 my-sm-0" onclick="location.href='<?= base_url() . 'register/index'?>'">Daftar</button>
                         </div>
                     </div>
                 </nav>

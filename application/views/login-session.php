@@ -11,7 +11,7 @@
                     <div class="header-rata-text">
                         <h2>Masuk</h2>
                         <div class="btn-navi">
-                            <a href="./index.html">Home</a>
+                            <a href="<?= base_url(). 'welcome/index' ?>">Home</a>
                             <span>Masuk</span>
                         </div>
                     </div>
