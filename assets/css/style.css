@@ -46,8 +46,6 @@ body{
   background-size: cover;
 }
 
-
-
 .header-content h1 {
   padding-top: 35%;
   font-size: 60px;
@@ -126,6 +124,10 @@ body{
   margin-top: 20px;
 }
 
+.icon-avatar {
+	margin-top: 20%;
+  }
+
 .nav-cards {
   padding: 20px 0;
 }
@@ -133,6 +135,7 @@ body{
 .nav-cards .nav-cards_item {
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 25px;
 }
 
 .nav-cards .nav-cards_item .nav-cards_btn {
@@ -261,4 +264,74 @@ body{
 .footer-section .footer-text .ft-any p {
 	color: #aaaab3;
 	margin-bottom: 20px;
+}
+
+/* ================================================================ */
+
+.blog-container .blog-item {
+	height: 450px;
+	position: relative;
+	margin-bottom: 30px;
+	border-radius: 5px;
+}
+
+.blog-container .set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.blog-container .card-content{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 95%;
+	background-image: linear-gradient(180deg, rgb(26, 26, 26) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.blog-container .card-content h4 a{
+	font-weight: 700;
+	color: white;
+	padding-bottom: 10px;
+}
+
+.blog-container .card-content .card-time{
+	color: white;
+	padding-bottom: 10px;
+}
+
+.blog-container .card-content .card-tag{
+	background-color: white;
+	border-radius: 50px;
+}
+
+.blog-container .card-content span{
+	padding: 2px 12px !important;
+
+}
+
+.about-content{
+	text-align: center;
+}
+
+.about-content .about-desc {
+	padding-bottom:50px;
+}
+
+.about-duo {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-duo .about-single {
+	width: 450px;
+}
+
+.about-kelompok {
+	padding-bottom: 50px;
+}
+
+.avatar {
+	width: 60px;
+	border-radius: 50px;
 }
