@@ -70,7 +70,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="<?= base_url() . 'assets/img/blog-6.jpg' ?>">
                         <div class="card-content">
-                            <h4><a href="#">Tisu atau Pengeringan Tangan yang lebih higienis</a></h4>
+                            <h4><a href="<?= base_url() . 'welcome/blog_detail'?>">Tisu atau Pengeringan Tangan yang lebih higienis</a></h4>
                             <div class="card-time"><script language='JavaScript'>document.write(tanggallengkap);</script></div>
                             <span class="card-tag">Pola Hidup</span>
                         </div>

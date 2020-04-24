@@ -38,3 +38,13 @@
 	padding: 2px 12px !important;
 
 }
+
+.blog-detail-content img {
+	padding-bottom: 50px;
+}
+
+.blog-detail-content .blog-detail-info{
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: justify;
+}
