@@ -38,6 +38,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['title'] = 'About';
 		$data['js'] = 'assets/js/index-all.js';
+		$data['css'] = 'assets/css/about.css';
 		$this->load->view('template/header', $data);
 		$this->load->view('about');
 		$this->load->view('template/footer', $data);
