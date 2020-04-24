@@ -14,6 +14,12 @@ class Register extends CI_Controller
 
     public function index()
     {
+        $data['css'] = 'assets/css/style-login.css';
+        $data['title'] = 'Home';
+        $data['js'] = 'assets/js/index-all.js';
+        $this->load->view('template/header', $data);
+        $this->load->view('register-session');
+        $this->load->view('template/footer', $data);
     }
 
     public function user()
