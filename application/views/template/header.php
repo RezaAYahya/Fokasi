@@ -34,7 +34,7 @@
             <div class="nav-menu">
                 <nav class="navbar nav-pad fixed-top navbar-expand-lg navbar-light">        
                     <a title="MediFo" alt="MediFo Logo" class="navbar-brand" href="<?= base_url() . 'welcome/index' ?>">
-                        <img src="<?= base_url() . 'assets/img/logo.png' ?>" id="nav-logo"/>
+                        <img src="<?= base_url() . 'assets/img/logo copy.png' ?>" id="nav-logo"/>
                     </a>
                     <div class="container-fluid" id="navbarSupportedContent">
                         <ul class="nav navbar-nav nav-show">

@@ -7,7 +7,7 @@
                         <div class="ft-about">
                             <div class="logo">
                                 <a href="<?= base_url() . 'welcome/index' ?>">
-                                    <img src="<?= base_url() . 'assets/img/logo.png' ?>" alt="">
+                                    <img src="<?= base_url() . 'assets/img/logo copy.png' ?>" alt="">
                                 </a>
                             </div>
                             <p>Sistem Informasi yang selalu memberikan kemudahan,<br /> Selalu ada dan terpercaya.</p>
