@@ -29,7 +29,8 @@ class Welcome extends CI_Controller {
 	public function blog()
 	{
 		$data['title'] = 'Informasi Kesehatan';
-		$data['js'] = 'assets/js/index-all.js';
+		$data['js'] = 'assets/js/set-bg.js';
+		$data['css'] = 'assets/css/blog.css';
 		$this->load->view('template/header', $data);
 		$this->load->view('blog');
 		$this->load->view('template/footer', $data);
