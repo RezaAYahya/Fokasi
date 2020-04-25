@@ -48,3 +48,10 @@
 	padding-right: 50px;
 	text-align: justify;
 }
+
+.card-tag{
+	background-color: white;
+	border-radius: 50px;
+	padding: 2px 12px !important;
+	padding-bottom: 15px;
+}
