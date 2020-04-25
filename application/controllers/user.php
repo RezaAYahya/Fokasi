@@ -84,4 +84,15 @@ class User extends CI_Controller
             redirect('/Welcome');
         }
     }
+    public function myforum()
+    {
+        $user = $this->session->userdata('username');
+        if ($user != NULL) {
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $this->load->view('template/header-dashboard', $data);
+            $this->load->view('dashboard-user-myforum');
+        } else {
+            redirect('/Welcome');
+        }
+    }
 }

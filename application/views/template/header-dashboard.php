@@ -57,7 +57,7 @@
                 <span>Forum</span>
             </div>
         </a>
-        <a href="#">
+        <a href="<?= base_url() . 'user/myforum'?>">
             <div>
                 <i class="far fa-comment-alt" ></i>
                 <span>Aktivitas Forum Saya</span>
