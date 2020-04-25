@@ -35,13 +35,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('blog');
 		$this->load->view('template/footer', $data);
 	}
-	public function blog_detail()
+	public function blog_detail($poto)
 	{
 		$data['title'] = 'Informasi Kesehatan';
 		$data['js'] = 'assets/js/index-all.js';
 		$data['css'] = 'assets/css/blog.css';
+		$data['foto'] = $poto;
 		$this->load->view('template/header', $data);
-		$this->load->view('blog-detail');
+		$this->load->view('blog-detail', $data);
 		$this->load->view('template/footer', $data);
 	}
 	public function about()
@@ -57,8 +58,27 @@ class Welcome extends CI_Controller {
 	{
 		$data['title'] = 'Cari Dokter';
 		$data['js'] = 'assets/js/index-all.js';
+		$data['css'] = 'assets/css/search-dokter.css';
 		$this->load->view('template/header', $data);
 		$this->load->view('search-dokter');
+		$this->load->view('template/footer', $data);
+	}
+	public function searchObat()
+	{
+		$data['title'] = 'Cari Obat';
+		$data['js'] = 'assets/js/index-all.js';
+		$data['css'] = 'assets/css/style-obat.css';
+		$this->load->view('template/header', $data);
+		$this->load->view('search-obat');
+		$this->load->view('template/footer', $data);
+	}
+	public function daftar_obat()
+	{
+		$data['title'] = 'Cari Obat';
+		$data['js'] = 'assets/js/index-all.js';
+		$data['css'] = 'assets/css/search-dokter.css';
+		$this->load->view('template/header', $data);
+		$this->load->view('daftar-obat');
 		$this->load->view('template/footer', $data);
 	}
 }

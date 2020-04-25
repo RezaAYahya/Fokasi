@@ -49,7 +49,7 @@
                     </div>
                     <div class="nav-cards_item col-12 col-md-3 d-flex flex-row flex-md-column">
                         <div class="nav-cards_btn">
-                            <div class="icon-avatar">
+                            <div style="padding-top:20%">
                                 <img class="avatar" src="<?= base_url() . 'assets/img/avatar-juli.jpeg' ?>">
                             </div>
                             <div class="d-flex flex-column justify-content-start text">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="nav-cards_item col-12 col-md-3 d-flex flex-row flex-md-column">
                         <div class="nav-cards_btn">
-                            <div class="icon-avatar">
+                            <div style="padding-top:20%">
                                 <img class="avatar" src="<?= base_url() . 'assets/img/avatar-adit.jpeg' ?>">
                             </div>
                             <div class="d-flex flex-column justify-content-start text">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="nav-cards_item col-12 col-md-3 d-flex flex-row flex-md-column">
                         <div class="nav-cards_btn">
-                            <div class="icon-avatar">
+                            <div style="padding-top:20%">
                                 <img class="avatar" src="<?= base_url() . 'assets/img/avatar.png' ?>">
                             </div>
                             <div class="d-flex flex-column justify-content-start text">

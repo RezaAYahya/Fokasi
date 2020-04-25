@@ -42,23 +42,23 @@
                                 <a class="nav-link" href="<?= base_url() . 'welcome/blog' ?>">Info Kesehatan<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="search-dokter.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Cari Dokter
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Dokter Kandungan</a>
-                                    <a class="dropdown-item" href="#">Dokter Kulit</a>
-                                    <a class="dropdown-item" href="#">Dokter Anak</a>
-                                    <a class="dropdown-item" href="#">Dokter THT</a>
-                                    <a class="dropdown-item" href="#">Dokter Penyakit Dalam</a>
-                                    <a class="dropdown-item" href="#">Dokter Bedah Sarah</a>
-                                    <a class="dropdown-item" href="#">Dokter Mata</a>
-                                    <a class="dropdown-item" href="#">Dokter Gigi</a>
-                                    <a class="dropdown-item" href="#">Dokter Jantung</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Kandungan</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Kulit</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Anak</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter THT</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Penyakit Dalam</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Bedah Sarah</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Mata</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Gigi</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'welcome/searchDok' ?>">Dokter Jantung</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cari Obat<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="<?= base_url() . 'welcome/searchObat' ?>">Cari Obat<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Forum<span class="sr-only">(current)</span></a>
