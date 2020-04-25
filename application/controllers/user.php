@@ -11,16 +11,18 @@ class User extends CI_Controller
     }
     public function index()
     {
-        //isinya ke dashboard
+        $this->load->view('template/header-dashboard');
+        $this->load->view('dashboard-user-home');
     }
 
     public function profileMember()
     {
         $user = $this->session->userdata('username');
-        $user = 'arditAja';
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
-            $this->load->view('profileMember', $data);
+            $data['profile'] = 'assets/css/style-profile.css';
+            $this->load->view('template/header-dashboard', $data);
+            $this->load->view('dashboard-user-profile', $data);
         } else {
             redirect('/Welcome');
         }

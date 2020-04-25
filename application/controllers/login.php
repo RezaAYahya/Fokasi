@@ -35,10 +35,9 @@ class Login extends CI_Controller
       $verify['password'] = $this->input->post('password');
       #ini validasi apakah data yang dimasukkan ada atau tidak
       if ($this->m_loginMember->verifyMember($verify)) {
-        echo "anjirr masukk akhirnya";
         $user_d = $this->m_member->getprofile($this->input->post('username'));
         $this->session->set_userdata('username', $user_d['username']);
-        $this->load->view('menu-member');
+        redirect('/user');
       } else {
         $error['error_message'] = "Username or password invalid";
         $this->load->view('login-user', $error);
