@@ -1,0 +1,354 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar Padding */
+.nav-pad {
+    background-color: transparent;
+    padding: 2rem 3rem;
+    font-size: 14px;
+    transition: background-color 0.5s ease 0s;
+}
+
+.scrolled {
+    background-color: white;
+    padding: 1rem 3rem;
+    font-size: 14px;
+    transition: background-color 0.5s ease 0s;
+}
+
+.btn-show {
+    transition: 0.5s ease 0s;
+}
+
+/* Body Padding */
+.body-pad {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+/* Navbar Hover Button */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: dodgerblue;
+}
+
+/* Header Image */
+.header-img {
+    display: block;
+    background-image: url(../img/header.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.header-content h1 {
+    padding-top: 35%;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.header-content p {
+    margin-bottom: 45px;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(120deg, rgb(60, 60, 255) 0%, rgb(0, 51, 128) 100%);
+}
+
+.covid-section {
+    padding: 40px 0;
+}
+
+.covid-section .covid-text span {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.covid-section .covid-text h3 {
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 38px;
+    margin-top: 10px;
+}
+
+.covid-section .covid-count {
+    text-align: right;
+}
+
+.covid-section .covid-count .covid-number {
+    display: inline-block;
+    text-align: center;
+    margin-left: 35px;
+    height: 120px;
+    width: 120px;
+    padding-top: 32px;
+    position: relative;
+}
+
+.covid-section .covid-count .covid-number:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ffffff;
+    content: "";
+    opacity: 0.1;
+    border-radius: 4px;
+}
+
+.covid-section .covid-count .covid-number:first-child {
+    margin-left: 0;
+}
+
+.covid-section .covid-count .covid-number span {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.covid-section .covid-count .covid-number p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 0;
+    line-height: 30px;
+}
+
+.icon {
+    margin-top: 20px;
+}
+
+.icon-avatar {
+    margin-top: 20%;
+}
+
+.nav-cards {
+    padding: 20px 0;
+}
+
+.nav-cards .nav-cards_item {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+}
+
+.nav-cards .nav-cards_item .nav-cards_btn {
+    background-color: white;
+    border-radius: 15px;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .11);
+}
+
+.nav-cards .nav-cards_item .nav-cards_btn:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, .30);
+}
+
+.nav-cards .nav-cards_item span {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .47px;
+    text-align: center;
+    color: #53565a;
+    margin-top: 14px;
+}
+
+.nav-cards .nav-cards_item p {
+    padding: 0 12px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: .28px;
+    text-align: center;
+    color: #53565a;
+    margin-top: 4px;
+}
+
+/* ============================================================== */
+
+.header-rata {
+    padding-top: 10rem;
+    padding-bottom: 80px;
+}
+
+.header-rata-text {
+    text-align: center;
+}
+
+.header-rata-text h2 {
+    font-size: 44px;
+    color: #19191a;
+    margin-bottom: 12px;
+}
+
+.header-rata-text .btn-navi a {
+    display: inline-block;
+    font-size: 18px;
+    color: #19191a;
+    margin-right: 20px;
+    position: relative;
+    font-weight: 500;
+}
+
+.header-rata-text .btn-navi a:after {
+    position: absolute;
+    right: -13px;
+    top: 1px;
+    content: " >";
+    font-size: 18px;
+    color: #aaaab3;
+}
+
+.header-rata-text .btn-navi span {
+    display: inline-block;
+    font-size: 18px;
+    color: #aaaab3;
+}
+
+/* ============================================================== */
+
+.footer-section {
+    background: #f8f8f8;
+}
+
+.footer-section .footer-text {
+    padding: 80px 0 30px;
+}
+
+.footer-section .footer-text .ft-about {
+    margin-bottom: 30px;
+}
+
+.footer-section .footer-text .ft-about .logo {
+    margin-bottom: 20px;
+}
+
+.footer-section .footer-text .ft-about .logo a {
+    display: inline-block;
+}
+
+.footer-section .footer-text .ft-about p {
+    color: rgb(71, 71, 71);
+    margin-bottom: 20px;
+}
+
+.footer-section .footer-text .ft-nav {
+    margin-bottom: 30px;
+}
+
+.footer-section .footer-text .ft-nav h6 {
+    font-size: 14px;
+    color: rgb(29, 29, 29);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.footer-section .footer-text .ft-link {
+    color: rgb(71, 71, 71);
+}
+
+.footer-section .footer-text .ft-any h6 {
+    font-size: 14px;
+    color: rgb(29, 29, 29);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.footer-section .footer-text .ft-any p {
+    color: #aaaab3;
+    margin-bottom: 20px;
+}
+
+/* ================================================================ */
+
+.blog-container .blog-item {
+    height: 450px;
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.blog-container .set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.blog-container .card-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 95%;
+    background-image: linear-gradient(180deg, rgb(26, 26, 26) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.blog-container .card-content h4 a {
+    font-weight: 700;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.blog-container .card-content .card-time {
+    color: white;
+    padding-bottom: 10px;
+}
+
+.blog-container .card-content .card-tag {
+    background-color: white;
+    border-radius: 50px;
+}
+
+.blog-container .card-content span {
+    padding: 2px 12px !important;
+
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content .about-desc {
+    padding-bottom: 50px;
+}
+
+.about-duo {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-duo .about-single {
+    width: 450px;
+}
+
+.about-kelompok {
+    padding-bottom: 50px;
+}
+
+.avatar {
+    width: 60px;
+    border-radius: 50px;
+}
+
+/* ========================================================= */
+
+.blog-detail-content img {
+    padding-bottom: 50px;
+}
+
+.blog-detail-content .blog-detail-info {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+}
