@@ -16,13 +16,12 @@ class m_dokter extends CI_Model
 
     public function setprofile($data)
     {
-        $this->db->set('usernamedok', $data['usernamedok']);
+        // $this->db->set('usernamedok', $data['usernamedok']); tidak terpakai
         $this->db->set('name', $data['name']);
-        $this->db->set('phone_number', $data['phone_number']);
+        $this->db->set('phonenumber', $data['phonenumber']);
         $this->db->set('email', $data['email']);
-        $this->db->set('bidang', $data['bidang']);
-        $this->db->where('usernamedok', $data['prevuser']);
-        $this->db->update('tb_member');
+        $this->db->where('usernamedok', $data['usernamedok']);
+        $this->db->update('tb_dokter');
     }
 
     public function regisDokter($data)

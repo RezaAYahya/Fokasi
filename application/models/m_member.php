@@ -15,11 +15,11 @@ class m_member extends CI_Model
 
     public function setprofile($data)
     {
-        $this->db->set('username', $data['username']);
+        // $this->db->set('username', $data['username']);
         $this->db->set('name', $data['name']);
-        $this->db->set('phone_number', $data['phone_number']);
+        $this->db->set('phonenumber', $data['phonenumber']);
         $this->db->set('email', $data['email']);
-        $this->db->where('username', $data['prevuser']);
+        $this->db->where('username', $data['username']);
         $this->db->update('tb_member');
     }
 
@@ -55,4 +55,7 @@ class m_member extends CI_Model
         $this->db->where('posting_id', $posting_id);
         $this->db->delete('tb_posting');
     }
+
+    //query untuk mencari dokter
+    // SELECT * FROM `tb_dokter` WHERE usernamedok LIKE '%mantap%'
 }
