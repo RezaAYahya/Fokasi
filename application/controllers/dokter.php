@@ -14,11 +14,20 @@ class Dokter extends CI_Controller
 
     public function index()
     {
+        //isinya ke dashboard
     }
 
     public function profileDokter()
     {
-        $this->load->view('profile');
+        $user = $this->session->userdata('username');
+        $user = 'amantap';
+        if ($user != NULL) {
+            $data['dataDokter'] = $this->m_dokter->getprofile($user);
+            $data['bidangDokter'] = $this->m_dokter->getBidang($user);
+            $this->load->view('profileDokter', $data);
+        } else {
+            redirect('/Welcome');
+        }
     }
 
     public function edit_profileDokter()

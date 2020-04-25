@@ -66,4 +66,12 @@ class m_dokter extends CI_Model
         $this->db->set('komentar', $komentar);
         $this->db->insert('tb_komen');
     }
+
+    public function getBidang($username)
+    {
+        $this->db->select('status_bidang');
+        $this->db->where('usernamedok', $username);
+        $this->db->join('tb_bidang', 'bidang_id');
+        return $this->db->get('tb_dokter')->row_array();
+    }
 }
