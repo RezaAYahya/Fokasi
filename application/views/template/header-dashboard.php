@@ -18,3 +18,68 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 </head>
+<body class="bg-white">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a title="MediFo" alt="MediFo Logo" href="<?= base_url() . 'user/index'?>">
+            <img src="<?= base_url() . 'assets/img/logo copy.png' ?>" id="nav-logo"/>
+        </a>
+        <div class="sidebar-header">
+            <div class="user-pic">
+              <img src="<?= base_url() . 'assets/img/avatar.png' ?>" >
+            </div>
+            <div class="user-info">
+                <?php if(isset($dataMember)){ ?>
+                    <span class="user-name"><?= $dataMember['name']?></span>
+                    <span class="user-role">User</span>
+                <?php } ?>
+              <span class="user-status">
+                <i class="fa fa-circle" style="color: #5cb85c;"></i>
+                <span>Online</span>
+              </span>
+            </div>
+        </div>
+        <a class="active" href="<?= base_url() . 'user/index'?>">
+            <div>
+                <i class="fa fa-home" style="color: white;"></i>
+                <span>Home</span>
+            </div>
+        </a>
+        <a href="<?= base_url() . 'user/profileMember' ?>">
+            <div>
+                <i class="fa fa-user-circle"></i>
+                <span>Profile</span>
+            </div>
+        </a>
+        <a href="<?= base_url() . 'user/forum'?>">
+            <div>
+                <i class="fa fa-comment-alt"></i>
+                <span>Forum</span>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <i class="far fa-comment-alt" ></i>
+                <span>Aktivitas Forum Saya</span>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <i class="fa fa-briefcase-medical"></i>
+                <span>Cari Dokter</span>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <i class="fa fa-medkit"></i>
+                <span>Cari Obat</span>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <i class="fa fa-book-reader"></i>
+                <span>Blog</span>
+            </div>
+        </a>
+    </div>      
+    <!-- End Sidebar -->
