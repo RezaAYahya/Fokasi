@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/style-dashboard.css' ?>" />
     <?php if(isset($profile)){ ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url() . $profile ?>" />
-    <?php } elseif (isset($edit_profile)) { ?>
+    <?php } if (isset($edit_profile)) { ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url() . $edit_profile ?>" />
     <?php }?>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

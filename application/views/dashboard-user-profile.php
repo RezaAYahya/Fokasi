@@ -9,7 +9,7 @@
                 <h5><?= $dataMember['phonenumber']?></h5>
             <?php } ?>
             <div class="middle">
-                <a class="btn" href="#">
+                <a class="btn" href="<?= base_url() . 'user/editsession'?>">
                     <i class="fa fa-user-edit fa-lg" style="color: black;"></i>
                 </a>
                 <a class="btn" href="#">
