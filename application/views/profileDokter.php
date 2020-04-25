@@ -11,14 +11,14 @@
 
 <body>
     <div class="box">
-        <img src="img/avatar.png" alt="" class="box-img">
+        <img src="<?= base_url('assets/'); ?>img/<?= $dataDokter['profile_pict'] ?>" alt="" class="box-img">
         <h1><?php echo $dataDokter['name']; ?></h1>
         <h5><?php echo $dataDokter['email']; ?></h5>
         <h5><?php echo $dataDokter['phonenumber']; ?></h5>
         <h5><?php echo $bidangDokter['status_bidang']; ?></h5>
 
         <div class="middle">
-            <a class="btn" href="#">
+            <a class="btn" href="<?= base_url('dokter/edit_profileDokter'); ?>">
                 <i class="fa fa-cog fa-lg" style="color: black;"></i>
             </a>
         </div>

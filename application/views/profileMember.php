@@ -11,13 +11,13 @@
 
 <body>
     <div class="box">
-        <img src="img/avatar.png" alt="" class="box-img">
+        <img src="<?= base_url('assets/'); ?>img/<?= $dataMember['profile_pict']; ?>" alt="" class="box-img">
         <h1><?php echo $dataMember['name']; ?></h1>
         <h5><?php echo $dataMember['email']; ?></h5>
         <h5><?php echo $dataMember['phonenumber']; ?></h5>
 
         <div class="middle">
-            <a class="btn" href="#">
+            <a class="btn" href="<?= base_url('user/edit_profileMember'); ?>">
                 <i class="fa fa-cog fa-lg" style="color: black;"></i>
             </a>
         </div>

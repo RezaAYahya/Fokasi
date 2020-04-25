@@ -20,7 +20,6 @@ class Dokter extends CI_Controller
     public function profileDokter()
     {
         $user = $this->session->userdata('username');
-        $user = 'amantap';
         if ($user != NULL) {
             $data['dataDokter'] = $this->m_dokter->getprofile($user);
             $data['bidangDokter'] = $this->m_dokter->getBidang($user);
@@ -33,7 +32,6 @@ class Dokter extends CI_Controller
     public function edit_profileDokter()
     {
         $user = $this->session->userdata('username');
-        // $user = 'amantap'; percobaan
         if ($user != NULL) {
             $datadok['dataDok'] = $this->m_dokter->getprofile('amantap');
             // $data['dataDok'] = $this->m_dokter->getprofile($this->session->userdata('username'));
