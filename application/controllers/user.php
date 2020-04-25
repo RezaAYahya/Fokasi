@@ -11,8 +11,14 @@ class User extends CI_Controller
     }
     public function index()
     {
-        $this->load->view('template/header-dashboard');
-        $this->load->view('dashboard-user-home');
+        $user = $this->session->userdata('username');
+        if ($user != NULL) {
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $this->load->view('template/header-dashboard', $data);
+            $this->load->view('dashboard-user-home');
+        } else {
+            redirect('/Welcome');
+        }
     }
 
     public function profileMember()
@@ -22,7 +28,7 @@ class User extends CI_Controller
             $data['dataMember'] = $this->m_member->getprofile($user);
             $data['profile'] = 'assets/css/style-profile.css';
             $this->load->view('template/header-dashboard', $data);
-            $this->load->view('dashboard-user-profile', $data);
+            $this->load->view('dashboard-user-profile');
         } else {
             redirect('/Welcome');
         }
@@ -66,5 +72,16 @@ class User extends CI_Controller
         // } else {
         //   redirect('/Welcome');
         // }
+    }
+    public function forum()
+    {
+        $user = $this->session->userdata('username');
+        if ($user != NULL) {
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $this->load->view('template/header-dashboard', $data);
+            $this->load->view('dashboard-user-forum');
+        } else {
+            redirect('/Welcome');
+        }
     }
 }
