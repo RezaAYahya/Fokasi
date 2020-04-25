@@ -1,0 +1,11 @@
+.nav-cards_btn-obat {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.11);
+}
+
+.nav-cards_btn-obat:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,.30);
+}
