@@ -117,7 +117,7 @@ class User extends CI_Controller
             $data['forum'] = 'assets/css/dashboard-forum1.css';
             $data['dataForum'] = $this->m_member->getmypost($user);
             $this->load->view('template/header-dashboard', $data);
-            $this->load->view('dashboard-user-myforum', $data);
+            $this->load->view('dashboard-user-forum', $data);
         } else {
             redirect('/Welcome');
         }

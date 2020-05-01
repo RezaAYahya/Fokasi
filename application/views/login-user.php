@@ -30,7 +30,7 @@
                 <center>
                     <img class="logo" src="<?= base_url() . 'assets/img/logo.png' ?>" />
                 </center>
-                <h3>Masuk</h3>
+                <h3>Masuk - User Side</h3>
                 <p>Gunakan Akun MediFo yang Terdaftar</p>
                 <div class="form-content">
                     <?php if (isset($error_message)) { ?>
