@@ -81,4 +81,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('daftar-obat');
 		$this->load->view('template/footer', $data);
 	}
+	public function forum()
+	{
+		$data['title'] = 'Forum';
+		$data['js'] = 'assets/js/index-all.js';
+		$data['css'] = 'assets/css/forum.css';
+		$this->load->view('template/header', $data);
+		$this->load->view('forum2');
+		$this->load->view('template/footer', $data);
+	}
 }

@@ -84,8 +84,8 @@ class User extends CI_Controller
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
             $data['class_forum'] = 'active';
-            $this->load->view('template/header-dashboard', $data);
-            $this->load->view('dashboard-user-forum');
+            // $this->load->view('template/header-dashboard', $data);
+            $this->load->view('forum2');
         } else {
             redirect('/Welcome');
         }

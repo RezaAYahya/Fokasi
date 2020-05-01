@@ -61,7 +61,7 @@
                                 <a class="nav-link" href="<?= base_url() . 'welcome/searchObat' ?>">Cari Obat<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Forum<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="<?= base_url() . 'welcome/forum' ?>">Forum<span class="sr-only">(current)</span></a>
                             </li>
                         </ul>
                         <div class="btn-show">
