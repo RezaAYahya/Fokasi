@@ -33,25 +33,13 @@ class User extends CI_Controller
             redirect('/Welcome');
         }
     }
-    public function editsession()
-    {
-        $user = $this->session->userdata('username');
-        if ($user != NULL) {
-            $data['dataMember'] = $this->m_member->getprofile($user);
-            $data['profile'] = 'assets/css/style-profile.css';
-            $data['edit_profile'] = 'assets/css/style-profile_edit.css';
-            $this->load->view('template/header-dashboard', $data);
-            $this->load->view('dashboard-user-profile_edit', $data);
-        } else {
-            redirect('/Welcome');
-        }
-    }
+
     public function edit_profileMember()
     {
         $user = $this->session->userdata('username');
         // $user = 'arditAja';
         if ($user != NULL) {
-            $datamember['dataMember'] = $this->m_member->getprofile($user);
+            $data['dataMember'] = $this->m_member->getprofile($user);
             // $data['dataDok'] = $this->m_dokter->getprofile($this->session->userdata('username'));
             $this->form_validation->set_rules('name', 'Name', 'required');
             $this->form_validation->set_rules('password', 'Password', 'required|trim');
@@ -62,7 +50,7 @@ class User extends CI_Controller
                 $data['profile'] = 'assets/css/style-profile.css';
                 $data['edit_profile'] = 'assets/css/style-profile_edit.css';
                 $this->load->view('template/header-dashboard', $data);
-                $this->load->view('dashboard-user-profile', $datamember);
+                $this->load->view('dashboard-user-profile_edit', $data);
             } else {
                 $data = [
                     // 'usernamedok' => $this->session->userdata('username'),

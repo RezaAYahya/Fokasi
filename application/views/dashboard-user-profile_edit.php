@@ -1,6 +1,6 @@
     <!-- Dasboard Content -->
     <div class="content">
-        <form action="<?= base_url() . 'user/profile' ?>" method="post">
+        <form action="<?= base_url() . 'user/edit_profileMember' ?>" method="post">
             <!-- <img class="logo" src="img/logo.png" align: center; /> -->
             <h3 style="padding-bottom: 15px; ">Edit Profile - Dokter Side</h3>
             <center>
@@ -11,10 +11,15 @@
             </center>
             <div class="form-content">
                 <?php if (isset($dataMember)) { ?>
-                    <input id="name" name="name" value="<?= $dataMember['name'] ?>" type="text" />
-                    <input id="user-name" name="user-name" value="<?= $dataMember['username'] ?>" type="text" />
-                    <input id="email" name="email" value="<?= $dataMember['email'] ?>" type="text" />
-                    <input id="number" name="number" value="<?= $dataMember['phonenumber'] ?>" type="text" />
+                    <input id="name" name="name" placeholder="Nama" type="text" value="<?= $dataMember['name'] ?>" />
+                    <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
+                    <input id="username" name="username" placeholder="Username" type="text" value="<?= $dataMember['username'] ?>" disabled />
+                    <input id="password" name="password" placeholder="Password" type="password" value="<?= $dataMember['password'] ?>" />
+                    <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
+                    <input id="email" name="email" placeholder="Email" type="text" value="<?= $dataMember['email'] ?>" />
+                    <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
+                    <input id="number" name="number" placeholder="Nomor Telepon" type="text" value="<?= $dataMember['phonenumber'] ?>" />
+                    <?= form_error('number', '<small class="text-danger">', '</small>'); ?>
                     <br />
                 <?php } ?>
                 <button type="submit" class="button">
