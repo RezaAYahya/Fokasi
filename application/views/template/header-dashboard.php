@@ -38,7 +38,9 @@
             <div class="user-info">
                 <?php if (isset($dataMember)) { ?>
                     <span class="user-name"><?= $dataMember['name'] ?></span>
-                    <span class="user-role">User</span>
+                <?php } ?>
+                <?php if (isset($role)) { ?>
+                    <span class="user-role"><?= $role ?></span>
                 <?php } ?>
                 <span class="user-status">
                     <i class="fa fa-circle" style="color: #5cb85c;"></i>
