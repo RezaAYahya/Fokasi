@@ -66,7 +66,7 @@ class User extends CI_Controller
                 $this->m_member->setprofile($data);
 
                 // $user = $this->session->set_userdata('username', $data['usernamedok']); kalau mau ganti username aja
-                redirect('/user/edit_profileMember/');
+                redirect('/user/profileMember/');
             }
         } else {
             redirect('/Welcome');
@@ -84,7 +84,8 @@ class User extends CI_Controller
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
             $data['class_forum'] = 'active';
-            // $this->load->view('template/header-dashboard', $data);
+            $data['forum'] = 'assets/css/dashboard-forum.css';
+            $this->load->view('template/header-dashboard', $data);
             $this->load->view('forum2');
         } else {
             redirect('/Welcome');
