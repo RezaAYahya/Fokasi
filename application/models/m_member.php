@@ -39,9 +39,9 @@ class m_member extends CI_Model
     // kalau datanya gak ada tinggal output belum ada postingan.
     public function getmypost($username)
     {
-        $query = $this->db->where('username', $username)->get('tb_posting')->row_array();
-        if ($query) {
-            return $query;
+        $query = $this->db->where('username', $username)->get('tb_posting');
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
         } else {
             return false;
         }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/style.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/style-dashboard-user.css' ?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/style_forum.css') ?>" media="screen">
     <?php if (isset($profile)) { ?>
         <link rel="stylesheet" type="text/css" href="<?= base_url() . $profile ?>" />
     <?php }

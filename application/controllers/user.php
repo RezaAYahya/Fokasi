@@ -99,8 +99,25 @@ class User extends CI_Controller
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
             $data['class_myforum'] = 'active';
+            $data['forum'] = 'assets/css/dashboard-forum1.css';
+            $data['dataForum'] = $this->m_member->getmypost($user);
             $this->load->view('template/header-dashboard', $data);
-            $this->load->view('dashboard-user-myforum');
+            $this->load->view('dashboard-user-myforum', $data);
+        } else {
+            redirect('/Welcome');
+        }
+    }
+
+    public function detailForum()
+    {
+        $user = $this->session->userdata('username');
+        if ($user != null) {
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['class_myforum'] = 'active';
+            $data['forum'] = 'assets/css/dashboard-forum1.css';
+            $data['dataForum'] = $this->m_member->getmypost($user);
+            $this->load->view('template/header-dashboard', $data);
+            $this->load->view('dashboard-user-myforum', $data);
         } else {
             redirect('/Welcome');
         }
