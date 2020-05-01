@@ -35,12 +35,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('blog');
 		$this->load->view('template/footer', $data);
 	}
-	public function blog_detail($poto)
+	public function blog_detail($poto, $judul)
 	{
 		$data['title'] = 'Informasi Kesehatan';
 		$data['js'] = 'assets/js/index-all.js';
 		$data['css'] = 'assets/css/blog.css';
 		$data['foto'] = $poto;
+		$data['judul'] = $judul;
 		$this->load->view('template/header', $data);
 		$this->load->view('blog-detail', $data);
 		$this->load->view('template/footer', $data);
