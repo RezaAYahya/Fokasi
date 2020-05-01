@@ -34,7 +34,6 @@ class m_posting extends CI_Model
         }
     }
 
-
     public function loadingpost()
     {
         #ini buat loading post kalau user atau dokter mau melihat semua postingan yang ada

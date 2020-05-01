@@ -1,148 +1,17 @@
 <div class="forum">
     <div class="container row no-gutters">
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
+        <?php foreach ($dataForum as $df) { ?>
+            <div class="box">
+                <div class="about">
+                    <a class="item1"><?php echo $df['judulpost'] ?></a>
+                    <div class="question">
+                        <a><?php echo $df['isipost'] ?></a>
+                        <div class="item 1">
+                            <h6>- <?php echo $df['username'] ?></h6>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="about">
-                <a href="#" class="item1">JS</a>
-                <a href="#" class="item2">Query</a>
-                <a href="#" class="item3">HTML</a>
-                <div class="question">
-                    <h5>Pertanyaannya Apa?</h5>
-                    <div class="answer">
-                        <h6>@username_dokter sejam yang lalu, update terakhir 2 menit yang lalu</h6>
-                        <div class="total_answer">
-                            <h9>5 jawaban</h9>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
     </div>
 </div>

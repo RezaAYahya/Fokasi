@@ -1,8 +1,14 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('m_posting');
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -86,9 +92,10 @@ class Welcome extends CI_Controller {
 	{
 		$data['title'] = 'Forum';
 		$data['js'] = 'assets/js/index-all.js';
-		$data['css'] = 'assets/css/forum.css';
+		$data['css'] = 'assets/css/iseng.css';
+		$data['dataForum'] = $this->m_posting->loadingpost();
 		$this->load->view('template/header', $data);
-		$this->load->view('forum2');
+		$this->load->view('forum2', $data);
 		$this->load->view('template/footer', $data);
 	}
 }

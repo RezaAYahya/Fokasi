@@ -7,6 +7,7 @@ class User extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_member');
+        $this->load->model('m_posting');
         $this->load->library('form_validation');
     }
     public function index()
@@ -84,9 +85,10 @@ class User extends CI_Controller
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
             $data['class_forum'] = 'active';
-            $data['forum'] = 'assets/css/dashboard-forum.css';
+            $data['forum'] = 'assets/css/dashboard-forum1.css';
+            $data['dataForum'] = $this->m_posting->loadingpost();
             $this->load->view('template/header-dashboard', $data);
-            $this->load->view('forum2');
+            $this->load->view('forum2', $data);
         } else {
             redirect('/Welcome');
         }
