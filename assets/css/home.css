@@ -1,0 +1,51 @@
+.welcome-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+    background-image: linear-gradient(90deg, rgb(19, 93, 255) 100%, rgba(30, 135, 255, 0) 100%);
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.11);
+}
+
+.welcome-card-content {
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0;
+    border: none;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.11);
+}
+
+.dashboard-card_item {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.dashboard-duo {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.dashboard-duo .dashboard-first {
+    width: 390px;
+}
+
+.dashboard-duo .dashboard-second {
+    width: 300px;
+}
+
+.dashboard-card-content{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

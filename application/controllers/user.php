@@ -14,6 +14,7 @@ class User extends CI_Controller
         $user = $this->session->userdata('username');
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['home'] = 'assets/css/home.css';
             $this->load->view('template/header-dashboard', $data);
             $this->load->view('dashboard-user-home');
         } else {
