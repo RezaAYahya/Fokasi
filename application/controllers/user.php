@@ -14,6 +14,7 @@ class User extends CI_Controller
         $user = $this->session->userdata('username');
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['class_home'] = 'active';
             $this->load->view('template/header-dashboard', $data);
             $this->load->view('dashboard-user-home');
         } else {
@@ -27,6 +28,7 @@ class User extends CI_Controller
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
             $data['profile'] = 'assets/css/style-profile.css';
+            $data['class_profile'] = 'active';
             $this->load->view('template/header-dashboard', $data);
             $this->load->view('dashboard-user-profile');
         } else {
@@ -93,6 +95,7 @@ class User extends CI_Controller
         $user = $this->session->userdata('username');
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['class_forum'] = 'active';
             $this->load->view('template/header-dashboard', $data);
             $this->load->view('dashboard-user-forum');
         } else {
@@ -104,6 +107,7 @@ class User extends CI_Controller
         $user = $this->session->userdata('username');
         if ($user != NULL) {
             $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['class_myforum'] = 'active';
             $this->load->view('template/header-dashboard', $data);
             $this->load->view('dashboard-user-myforum');
         } else {

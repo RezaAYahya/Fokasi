@@ -39,43 +39,43 @@
               </span>
             </div>
         </div>
-        <a class="active" href="<?= base_url() . 'user/index'?>">
+        <a class="<?php if(isset($class_home)) echo $class_home?>" href="<?= base_url() . 'user/index'?>">
             <div>
                 <i class="fa fa-home" style="color: white;"></i>
                 <span>Home</span>
             </div>
         </a>
-        <a href="<?= base_url() . 'user/profileMember' ?>">
+        <a class="<?php if(isset($class_profile)) echo $class_profile?>" href="<?= base_url() . 'user/profileMember' ?>">
             <div>
                 <i class="fa fa-user-circle"></i>
                 <span>Profile</span>
             </div>
         </a>
-        <a href="<?= base_url() . 'user/forum'?>">
+        <a class="<?php if(isset($class_forum)) echo $class_forum?>" href="<?= base_url() . 'user/forum'?>">
             <div>
                 <i class="fa fa-comment-alt"></i>
                 <span>Forum</span>
             </div>
         </a>
-        <a href="<?= base_url() . 'user/myforum'?>">
+        <a class="<?php if(isset($class_myforum)) echo $class_myforum?>" href="<?= base_url() . 'user/myforum'?>">
             <div>
                 <i class="far fa-comment-alt" ></i>
                 <span>Aktivitas Forum Saya</span>
             </div>
         </a>
-        <a href="#">
+        <a class="<?php if(isset($class_dok)) echo $class_dok?>" href="#">
             <div>
                 <i class="fa fa-briefcase-medical"></i>
                 <span>Cari Dokter</span>
             </div>
         </a>
-        <a href="#">
+        <a class="<?php if(isset($class_obat)) echo $class_obat?>" href="#">
             <div>
                 <i class="fa fa-medkit"></i>
                 <span>Cari Obat</span>
             </div>
         </a>
-        <a href="#">
+        <a class="<?php if(isset($class_blog)) echo $class_blog?>" href="#">
             <div>
                 <i class="fa fa-book-reader"></i>
                 <span>Blog</span>
