@@ -8,14 +8,27 @@ class m_posting extends CI_Model
     #kalau nyari get post berdasarkan user yang punya, ada di model member
     #gitu juga kalau komentar, untuk loading komentar apa aja yang dipost dokter ada di model dokter
 
-    public function loadkomentar($data)
+    public function loadDatakomentarData($data)
     {
         #ini dapet dari controller yang ngambil dari view
         #di view kasih php untuk add userdata
+        #mengembalikan data-data yang komen dan isi komentar
         $id_post = $data['id_post'];
-        $query = $this->db->where('posting_id', $id_post)->get('tb_komentar');
+        $query = $this->db->where('posting_id', $id_post)->join('tb_dokter', 'usernamedok')->get('tb_komentar');
         if ($query->num_rows() > 0) {
             return $query->result_array();
+        } else {
+            return false;
+        }
+    }
+
+    public function getPosterDataByPostID($data)
+    {
+        #mengembalikan isi postingan dan data data yang melakukan posting
+        $id = $data['post_id'];
+        $query = $this->db->where('posting_id', $id)->join('tb_member', 'username')->get('tb_posting');
+        if ($query->num_rows > 0) {
+            return $query->row_result();
         } else {
             return false;
         }

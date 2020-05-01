@@ -14,6 +14,7 @@
                     <input id="name" name="name" placeholder="Nama" type="text" value="<?= $dataMember['name'] ?>" />
                     <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
                     <input id="username" name="username" placeholder="Username" type="text" value="<?= $dataMember['username'] ?>" disabled />
+                    <!-- <?= form_error('username', '<small class="text-danger">', '</small>'); ?> -->
                     <input id="password" name="password" placeholder="Password" type="password" value="<?= $dataMember['password'] ?>" />
                     <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
                     <input id="email" name="email" placeholder="Email" type="text" value="<?= $dataMember['email'] ?>" />

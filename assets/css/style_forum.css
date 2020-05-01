@@ -1,0 +1,139 @@
+.top-forum{
+    background: #009cf2;
+    background: linear-gradient(to bottom, #009cf2 0%, #669bbd 100%);
+    color: white; 
+    padding: 20px 0; }
+    .top-forum h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 5px; 
+    text-align: center; }
+
+.container, .container-desktop-only {
+    width: 80%;
+    margin: 0 auto; }
+    .container h1, .container-desktop-only h1 {
+      word-wrap: break-word; }
+
+.section {
+    padding: 30px 0;
+    background: #F2F5F7; }
+
+.columns {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+
+.bagan {
+    width: 70%;
+    -ms-flex: none;
+    flex: none; }
+
+.cards {
+    background: white;
+    position: relative;
+    border-radius: 3px;
+    padding: 1.25rem 1.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease-in;
+    margin: 0.5rem;
+    word-break: break-word;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  
+.cards-helper .cards {
+    margin-top: 0px; }
+  
+.cards-helper form {
+    margin-left: 10px;
+    max-width: 99%; }
+
+.is-extra-top {
+    padding-bottom: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #515151; }
+
+.avatar-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative; }
+
+.side-avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 5px; 
+    margin-top: 9px;
+    }
+
+.link {
+    color: #009cf2;
+    text-decoration: underline; }
+
+.badge2 {
+    height: 8px;
+    width: 8px;
+    background-color: #28b8ab;
+    border-radius: 50%;
+    display: inline-block; }
+
+.is-article {
+    white-space: pre-line;
+    line-height: 1.8em;
+    word-wrap: break-word; }
+
+.form-input {
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid #74b2d8;
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 5px; }
+.form-input label {
+    display: block;
+    font-size: 1rem;
+    color: #515151; }
+.form-input input, .form-input textarea {
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    background: transparent;
+    padding: 5px 0; }
+.form-input textarea {
+      padding-top: 10px;
+      width: 99%; }
+.form-input :focus {
+      outline: none; }
+.textarea_btn_wrapper {
+    position: absolute;
+    top: 5px;
+    right: 10px; }
+    .textarea_btn_wrapper .textarea_btn {
+    float: right;
+    margin-left: 5px; }
+    .textarea_btn_wrapper .textarea_btn:hover {
+    cursor: pointer; }
+
+.button {
+ border-radius: 5px;
+    display: inline-block;
+    padding: 0.5rem;
+    border: 2px solid #333;
+    width: 100%;
+    text-align: center; 
+    transition: all 0.3s ease-in; }
+    .button.is-primary {
+      border-color: #74b2d8;
+      color: #009cf2; }
+    .button.is-primary:hover {
+        background: #009cf2;
+        color: white; }
+    .button.is-medium {
+      font-size: 1.25rem;
+      padding: 0.75rem;}
+
