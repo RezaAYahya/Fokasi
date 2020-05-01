@@ -56,6 +56,8 @@ class m_member extends CI_Model
         $this->db->delete('tb_posting');
     }
 
+
+
     //query untuk mencari dokter
     // SELECT * FROM `tb_dokter` WHERE usernamedok LIKE '%mantap%'
 }
