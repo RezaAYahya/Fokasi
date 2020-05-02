@@ -16,14 +16,14 @@ class Dokter extends CI_Controller
     {
         $user = $this->session->userdata('username');
         if ($user != NULL) {
-            $data['dataMember'] = $this->m_dokter->getprofile($user);
+            $data['dataDokter'] = $this->m_dokter->getprofile($user);
             $data['class_home'] = 'active';
             $data['role'] = 'Dokter';
-            $this->load->view('template/header-dashboard', $data);
+            $this->load->view('template/header-dashboard-dokter', $data);
             $this->load->view('dokter/home');
         } else {
-            // redirect('/login/dokter');
-            echo 'test';
+            redirect('/login/dokter');
+            // echo 'test';
         }
     }
 
@@ -33,7 +33,9 @@ class Dokter extends CI_Controller
         if ($user != NULL) {
             $data['dataDokter'] = $this->m_dokter->getprofile($user);
             $data['bidangDokter'] = $this->m_dokter->getBidang($user);
-            $this->load->view('dokter/profileDokter', $data);
+            $data['profile'] = 'assets/css/style-profile-dokter.css';
+            $this->load->view('template/header-dashboard-dokter', $data);
+            $this->load->view('dokter/dashboard-dokter-profile', $data);
         } else {
             redirect('/Welcome');
         }

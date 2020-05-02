@@ -6,9 +6,9 @@ class m_dokter extends CI_Model
 
     public function getprofile($username)
     {
-        $query = $this->db->where('usernamedok', $username)->get('tb_dokter')->row_array();
-        if ($query) {
-            return $query;
+        $query = $this->db->where('usernamedok', $username)->join('tb_bidang', 'bidang_id')->get('tb_dokter');
+        if ($query->num_rows() > 0) {
+            return $query->row_array();
         } else {
             return false;
         }

@@ -15,7 +15,7 @@
         <h1><?php echo $dataDokter['name']; ?></h1>
         <h5><?php echo $dataDokter['email']; ?></h5>
         <h5><?php echo $dataDokter['phonenumber']; ?></h5>
-        <h5><?php echo $bidangDokter['status_bidang']; ?></h5>
+        <h5><?php echo $dataDokter['status_bidang']; ?></h5>
 
         <div class="middle">
             <a class="btn" href="<?= base_url('dokter/edit_profileDokter'); ?>">
