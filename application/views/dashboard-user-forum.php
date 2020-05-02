@@ -28,14 +28,16 @@
                         <?php if ($komentar != false) { ?>
                             <?php foreach ($komentar as $kt) { ?>
                                 <div>
-                                    <h8 name="subject" id="subject_textarea" rows="8" cols="40" placeholder="Tulis jawaban anda disini . . . "><?php echo $kt['isiKomentar'] ?></h8>
+                                    <h6 name="subject" id="subject_textarea" rows="8" cols="40" placeholder="Tulis jawaban anda disini . . . "><?php echo $kt['isiKomentar'] ?></h6>
+                                    <div>
+                                        <h6><small>- <?php echo $kt['usernamedok']; ?></small></h6>
+                                    </div>
                                 </div>
                             <?php } ?>
                         <?php } else { ?>
-                            <h2>no comment</h2>
+                            <p>no comment</p>
                         <?php } ?>
                         <!-- <input type="submit" class="button is-primary is-full is-medium" value="Submit Jawaban"> -->
-
                 </form>
             </div>
         </div>

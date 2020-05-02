@@ -13,6 +13,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <button class="button btn-danger">
+                                delete
+                            </button></div>
                     </div>
                 <?php } ?>
             </div>
