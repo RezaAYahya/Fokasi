@@ -5,7 +5,7 @@
                 <?php foreach ($dataForum as $df) { ?>
                     <div class="box">
                         <div class="about">
-                            <a class="item1" href="<?= base_url() . 'user/detailForum' ?>"><?php echo $df['judulpost'] ?></a>
+                            <a class="item1" href="<?= base_url() . 'user/detailForum/' . $df['posting_id'] ?>"><?php echo $df['judulpost'] ?></a>
                             <div class="question">
                                 <a><?php echo $df['isipost'] ?></a>
                                 <div class="item 1">

@@ -108,14 +108,15 @@ class User extends CI_Controller
         }
     }
 
-    public function detailForum()
+    public function detailForum($posting_id)
     {
         $user = $this->session->userdata('username');
         if ($user != null) {
             $data['dataMember'] = $this->m_member->getprofile($user);
             $data['class_myforum'] = 'active';
             $data['forum'] = 'assets/css/dashboard-forum1.css';
-            $data['dataForum'] = $this->m_member->getmypost($user);
+            $data['dataForum'] = $this->m_posting->loadingpostbyID($posting_id);
+            $data['komentar'] = $this->m_posting->loadDatakomentarbyID($posting_id);
             $this->load->view('template/header-dashboard', $data);
             $this->load->view('dashboard-user-forum', $data);
         } else {
