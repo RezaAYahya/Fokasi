@@ -27,7 +27,9 @@
                         </div>
                         <?php if ($komentar != false) { ?>
                             <?php foreach ($komentar as $kt) { ?>
-                                <h5 name="subject" id="subject_textarea" rows="8" cols="40" placeholder="Tulis jawaban anda disini . . . "><?php echo $kt['isiKomentar'] ?></h5>
+                                <div>
+                                    <h8 name="subject" id="subject_textarea" rows="8" cols="40" placeholder="Tulis jawaban anda disini . . . "><?php echo $kt['isiKomentar'] ?></h8>
+                                </div>
                             <?php } ?>
                         <?php } else { ?>
                             <h2>no comment</h2>
