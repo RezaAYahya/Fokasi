@@ -21,7 +21,7 @@
 <body class="bg-white">
     <div class="container editprof">
         <form action="<?= base_url('dokter/edit_profileDokter') ?>" method="post">
-            <!-- <img class="logo" src="img/logo.png" align: center; /> -->
+            <img class="logo" src="<?= base_url('assets/img/logo.png') ?>" align: center; />
             <h3 style="padding-bottom: 15px; ">Edit Profile - Dokter</h3>
             <center>
                 <div>

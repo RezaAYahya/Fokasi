@@ -14,9 +14,9 @@
                             </div>
                         </div>
                         <div>
-                            <button class="button btn-danger">
+                            <a href="<?= base_url() ?>user/deleteMyPost/<?= $df['posting_id'] ?>" class="button btn-danger" onclick="return confirm('Anda akan menghapus Post anda');">
                                 delete
-                            </button></div>
+                            </a></div>
                     </div>
                 <?php } ?>
             </div>

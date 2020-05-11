@@ -123,4 +123,20 @@ class User extends CI_Controller
             redirect('/Welcome');
         }
     }
+
+    public function deleteMyPost($id)
+    {
+        $user = $this->session->userdata('username');
+        if ($user != null) {
+            $this->m_posting->hapusposting($id);
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['class_myforum'] = 'active';
+            $data['forum'] = 'assets/css/dashboard-forum1.css';
+            $data['dataForum'] = $this->m_member->getmypost($user);
+            $this->load->view('template/header-dashboard', $data);
+            $this->load->view('dashboard-user-myforum', $data);
+        } else {
+            redirect('/Welcome');
+        }
+    }
 }
