@@ -25,12 +25,12 @@ class m_posting extends CI_Model
     public function getPosterDataByPostID($data)
     {
         #mengembalikan isi postingan dan data data yang melakukan posting
-        $id = $data['post_id'];
+        $id = $data;
         $query = $this->db->where('posting_id', $id)->join('tb_member', 'username')->get('tb_posting');
-        if ($query->num_rows > 0) {
-            return $query->row_result();
+        if ($query->num_rows() > 0) {
+            return $query->row_array();
         } else {
-            return false;
+            return 1;
         }
     }
 

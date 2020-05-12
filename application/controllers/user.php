@@ -117,6 +117,7 @@ class User extends CI_Controller
             $data['forum'] = 'assets/css/dashboard-forum1.css';
             $data['dataForum'] = $this->m_posting->loadingpostbyID($posting_id);
             $data['komentar'] = $this->m_posting->loadDatakomentarbyID($posting_id);
+
             $this->load->view('template/header-dashboard', $data);
             $this->load->view('dashboard-user-forum', $data);
         } else {
