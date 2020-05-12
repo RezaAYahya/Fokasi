@@ -9,6 +9,8 @@ class Dokter extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_dokter');
+        $this->load->model('m_member');
+        $this->load->model('m_posting');
         $this->load->library('form_validation');
     }
 
@@ -73,9 +75,24 @@ class Dokter extends CI_Controller
             redirect('/Welcome');
         }
         // batas
+    }
+    public function forum()
+    {
+        $user = $this->session->userdata('username');
+        if ($user != NULL) {
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['class_forum'] = 'active';
+            $data['forum'] = 'assets/css/dashboard-forum1.css';
+            $data['dataForum'] = $this->m_posting->loadingpost();
 
+            $data['dataDokter'] = $this->m_dokter->getprofile($user);
+            $data['class_home'] = 'active';
+            $data['role'] = 'Dokter';
 
-
-
+            $this->load->view('template/header-dashboard-dokter', $data);
+            $this->load->view('dokter/dashboard-dokter-forum', $data);
+        } else {
+            redirect('/Welcome');
+        }
     }
 }

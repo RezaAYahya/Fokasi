@@ -148,7 +148,6 @@ class User extends CI_Controller
             $data['editforum'] = 'assets/css/style-profile_edit.css';
             $data['dataForum'] = $this->m_member->getMyPostById($id);
 
-            $data['dataMember'] = $this->m_member->getprofile($user);
             $this->form_validation->set_rules('Judul', 'Judul', 'required');
             $this->form_validation->set_rules('Isi', 'Isi', 'required');
 
@@ -163,6 +162,39 @@ class User extends CI_Controller
                 $this->m_member->updateMyPost($id, $edit);
                 $this->load->view('template/header-dashboard', $data);
                 $this->load->view('dashboard-user-editforum', $data);
+            }
+        } else {
+            redirect('/Welcome');
+        }
+    }
+
+    public function makeApost()
+    {
+        $user = $this->session->userdata('username');
+        if ($user != NULL) {
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['class_createforum'] = 'active';
+            $data['editforum'] = 'assets/css/style-profile_edit.css';
+            $data['dataForum'] = $this->m_member->getmypost($user);
+
+            $this->form_validation->set_rules('Judul', 'Judul', 'required');
+            $this->form_validation->set_rules('Isi', 'Isi', 'required');
+            if ($this->form_validation->run() == false) {
+
+                $this->load->view('template/header-dashboard', $data);
+                $this->load->view('dashboard-user-createforum');
+
+                $this->load->view('template/header-dashboard', $data);
+                $this->load->view('dashboard-user-myforum', $data);
+            } else {
+                $new = [
+                    'username' => $user,
+                    'isipost' => $this->input->post('Isi'),
+                    'judulpost' => $this->input->post('Judul')
+                ];
+                $this->m_member->insertpost($new);
+
+                redirect('/User');
             }
         } else {
             redirect('/Welcome');

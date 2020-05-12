@@ -76,7 +76,7 @@
                 <span>Aktivitas Forum Saya</span>
             </div>
         </a>
-        <a class="<?php if (isset($class_createforum)) echo $class_createforum ?>" href="<?= base_url() . 'user/createForum' ?>">
+        <a class="<?php if (isset($class_createforum)) echo $class_createforum ?>" href="<?= base_url() . 'user/makeApost/' ?>">
             <div>
                 <i class="fa fa-comment-alt"></i>
                 <span>Buat Forum</span>

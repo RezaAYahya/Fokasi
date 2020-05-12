@@ -74,6 +74,10 @@ class m_member extends CI_Model
         $this->db->update('tb_posting');
     }
 
+    public function insertpost($data)
+    {
+        $this->db->insert('tb_posting', $data);
+    }
 
     //query untuk mencari dokter
     // SELECT * FROM `tb_dokter` WHERE usernamedok LIKE '%mantap%'
