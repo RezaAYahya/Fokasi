@@ -47,6 +47,16 @@ class m_member extends CI_Model
         }
     }
 
+    public function getMyPostById($id)
+    {
+        $query = $this->db->where('posting_id', $id)->get('tb_posting');
+        if ($query->num_rows() > 0) {
+            return $query->row_array();
+        } else {
+            return false;
+        }
+    }
+
     public function deletemypost($data)
     {
         $user = $data['username']; #username yang punya post ambil aja dari session
@@ -56,6 +66,13 @@ class m_member extends CI_Model
         $this->db->delete('tb_posting');
     }
 
+    public function updateMyPost($id, $data)
+    {
+        $this->db->set('isipost', $data['isipost']);
+        $this->db->set('judulpost', $data['judulpost']);
+        $this->db->where('posting_id', $id);
+        $this->db->update('tb_posting');
+    }
 
 
     //query untuk mencari dokter

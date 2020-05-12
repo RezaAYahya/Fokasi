@@ -139,4 +139,33 @@ class User extends CI_Controller
             redirect('/Welcome');
         }
     }
+
+    public function editMyPost($id)
+    {
+        $user = $this->session->userdata('username');
+        if ($user != null) {
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $data['editforum'] = 'assets/css/style-profile_edit.css';
+            $data['dataForum'] = $this->m_member->getMyPostById($id);
+
+            $data['dataMember'] = $this->m_member->getprofile($user);
+            $this->form_validation->set_rules('Judul', 'Judul', 'required');
+            $this->form_validation->set_rules('Isi', 'Isi', 'required');
+
+            if ($this->form_validation->run() == false) {
+                $this->load->view('template/header-dashboard', $data);
+                $this->load->view('dashboard-user-editforum', $data);
+            } else {
+                $edit = [
+                    'isipost' => $this->input->post('Isi'),
+                    'judulpost' => $this->input->post('Judul'),
+                ];
+                $this->m_member->updateMyPost($id, $edit);
+                $this->load->view('template/header-dashboard', $data);
+                $this->load->view('dashboard-user-editforum', $data);
+            }
+        } else {
+            redirect('/Welcome');
+        }
+    }
 }

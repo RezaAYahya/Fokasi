@@ -13,10 +13,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <a href="<?= base_url() ?>user/deleteMyPost/<?= $df['posting_id'] ?>" class="button btn-danger" onclick="return confirm('Anda akan menghapus Post anda');">
-                                delete
-                            </a></div>
+                        <div class="row">
+                            <div class="col-5">
+                                <a href="<?= base_url() ?>user/deleteMyPost/<?= $df['posting_id'] ?>" class="button btn-danger" onclick="return confirm('Anda akan menghapus Post anda');">
+                                    delete
+                                </a>
+                            </div>
+                            <div class="col-5">
+                                <a href="<?= base_url() ?>user/editMyPost/<?= $df['posting_id'] ?>" class="button btn-primary">
+                                    edit
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
